@@ -4,7 +4,7 @@
 QTcpServer* server;
 QTcpSocket* socket;
 operation ss[144];
-QString version="0.9.2";
+QString version="x.x.x";
 int ss_time=0;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
         ss[i].get_pro();//计算每关每种材料的掉落概率
     }
     server=new QTcpServer;
-    server->listen(QHostAddress::Any,2839);
+    server->listen(QHostAddress::Any,6666);
     connect(server,SIGNAL(newConnection()),SLOT(ServerNewConnection()));
 
 }
